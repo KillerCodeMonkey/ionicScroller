@@ -26,14 +26,14 @@ Configuration
 - style through class or ng-class expression: `css-class="button button-assertive"` (wraps up in ng-class, default: 'button button-dark')
 
 ### ion-scroller-to
-- change button text: `text="YOUR TEXT OR EMPTY"` (default: Top / Bottom)
+- change button text: `text="YOUR TEXT OR EMPTY"` (default: GoTo)
 - animate scrolling: `animate="true"` (default false)
 - left, top: `left="10" top="50"` (target scroll position, required)
 - connect to delegateHandle: `scroll-delegate="delegateHandle"` (default, the main delegateHandle like ion-content)
 - style through class or ng-class expression: `css-class="button button-assertive"` (wraps up in ng-class, default: 'button button-dark')
 
 ### ion-scroller-anchor
-- change button text: `text="YOUR TEXT OR EMPTY"` (default: Top / Bottom)
+- change button text: `text="YOUR TEXT OR EMPTY"` (default: GoTo)
 - animate scrolling: `animate="true"` (default false)
 - anchor: `anchor="domNodeId"` (target node-id, required)
 - connect to delegateHandle: `scroll-delegate="delegateHandle"` (default, the main delegateHandle like ion-content)
