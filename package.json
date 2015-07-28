@@ -1,8 +1,8 @@
 {
   "name": "ionic-scroller",
-  "version": "0.0.1",
-  "description": "Angular and IonicFramewokr extension to scroll-top, -bottom, -to",
-  "author": "Bnegt Weiße <bengtler@gmail.com>",
+  "version": "0.0.2",
+  "description": "Angular and IonicFramework extension to scroll-top, -bottom, -to",
+  "author": "Bengt Weiße <bengtler@gmail.com>",
   "homepage": "https://github.com/KillerCodeMonkey/ionicScroller",
   "devDependencies": {
     "grunt": "~0.4.3",

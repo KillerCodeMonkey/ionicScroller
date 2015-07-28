@@ -1,6 +1,6 @@
 # ionicScroller
 
-ionicScroller is an [Angular.js](http://angularjs.org/) and ionic-framework extension for simple scroll-top, -bottom, -to functionality.
+ionicScroller is an [Angular.js](http://angularjs.org/) and [Ionic Framework](http://ionicframework.com/) extension for simple scroll-top, -bottom, -to functionality.
 
 Installation
 ============
