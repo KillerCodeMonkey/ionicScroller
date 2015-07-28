@@ -11,7 +11,7 @@
         function ($timeout, $ionicScrollDelegate) {
             return {
                 scope: {
-                    'class': '@?',
+                    'cssClass': '@?',
                     'offset': '@?',
                     'text': '@?',
                     'animate': '@?',
@@ -19,10 +19,10 @@
                 },
                 restrict: 'E',
                 replace: true,
-                template: '<button ng-show="show" ng-class="class" ng-click="scrollTop()">{{text}} {{class}}</button>',
+                template: '<button ng-show="show" ng-class="cssClass" ng-click="scrollTop()">{{text}}</button>',
                 link: function ($scope) {
                     var defaults = {
-                            'class': 'button button-dark',
+                            'cssClass': 'button button-dark',
                             'offset': -1,
                             'text': 'Top'
                         },
@@ -36,7 +36,7 @@
                             $scope.show = delegateHandle.getScrollPosition().top >= $scope.offset;
                         };
 
-                    $scope.class = $scope.class || defaults.class;
+                    $scope.cssClass = $scope.cssClass || defaults.cssClass;
                     $scope.animate = $scope.animate === null || $scope.animate === undefined || $scope.animate === '' || $scope.animate === 'false' ? false : true;
                     $scope.offset = $scope.offset === null || $scope.offset === undefined || $scope.offset === '' ? defaults.offset : $scope.offset;
                     $scope.text = $scope.text === null || $scope.text === undefined ? defaults.text : $scope.text;

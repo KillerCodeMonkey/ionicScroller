@@ -23,3 +23,4 @@ Configuration
 - animate scrolling: `animate="true"` (default false)
 - auto-hide at offset: `offset="10"` (ion-scroller-bottom: hides button if scroll position top >= offset, default: -1; ion-scroller-top: hides button if scroll position top <= offset, default: -1; offset="-1": does not hide the button)
 - connect to delegateHandle: `scroll-delegate="delegateHandle"` (default, the main delegateHandle like ion-content)
+- style through class or ng-class expression: `css-class="button button-assertive"` (wraps up in ng-class, default: 'button button-dark')
