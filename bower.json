@@ -1,0 +1,16 @@
+{
+  "name": "ionic-scroller",
+  "version": "0.0.1",
+  "main": ["src/ionic-scroller.min.js"],
+  "ignore": [
+    "bower_components",
+    "node_modules",
+    "spec",
+    "demo.html",
+    "package.json",
+    "Gruntfile.js"
+  ],
+  "dependencies": {
+    "ionic": "~1.0.1"
+  }
+}

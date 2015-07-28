@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Ionic Scroller Test</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta charset="utf-8">
+
+        <!-- Style -->
+        <link rel="stylesheet" href="bower_components/ionic/release/css/ionic.min.css">
+        <!-- Scripts -->
+        <script type="text/javascript" src="bower_components/ionic/release/js/ionic.bundle.min.js"></script>
+        <script type="text/javascript" src="src/ionic-scroller.js"></script>
+        <script>
+            // declare a module and load quillModule
+            var myAppModule = angular.module('scrollerTest', ['ionic', 'ionicScroller']);
+
+            myAppModule.controller('MainCtrl', [
+                '$scope',
+                function ($scope) {
+                    $scope.list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+                }
+            ]);
+        </script>
+    </head>
+    <body ng-app="scrollerTest">
+        <ion-content delegate-handle="main" ng-controller="MainCtrl">
+            <ion-scroller-bottom scroll-delegate="main" text="DOWN" animate="true" css-class="button button-assertive ion-arrow-down-a" offset="10"></ion-scroller-bottom>
+            <div class="card" ng-repeat="item in list">
+              <div class="item item-text-wrap">
+                {{$index}} - This is a basic Card which contains an item that has wrapping text.
+              </div>
+            </div>
+            <ion-scroller-top></ion-scroller-top>
+        </ion-content>
+    </body>
+</html>

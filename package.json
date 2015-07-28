@@ -1,0 +1,31 @@
+{
+  "name": "ionic-scroller",
+  "version": "0.0.1",
+  "description": "Angular and IonicFramewokr extension to scroll-top, -bottom, -to",
+  "author": "Bnegt Weiße <bengtler@gmail.com>",
+  "homepage": "https://github.com/KillerCodeMonkey/ionicScroller",
+  "devDependencies": {
+    "grunt": "~0.4.3",
+    "grunt-contrib-uglify": "~0.6.0"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KillerCodeMonkey/ionicScroller"
+  },
+  "bugs": {
+    "url": "https://github.com/KillerCodeMonkey/ionicScroller/issues"
+  },
+  "keywords": [
+    "scroll",
+    "scrolling",
+    "scroller",
+    "ionic framework",
+    "ionic",
+    "angular",
+    "directive"
+  ]
+}
