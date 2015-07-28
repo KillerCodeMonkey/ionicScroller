@@ -5,6 +5,7 @@ ionicScroller is an [Angular.js](http://angularjs.org/) and [Ionic Framework](ht
 Installation
 ============
 - run `bower install ionic-scroller`
+- or run `npm install ionic-scroller`
 - or download zip from release page: https://github.com/KillerCodeMonkey/ionicScroller/releases
 
 Usage
