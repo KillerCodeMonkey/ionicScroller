@@ -85,7 +85,7 @@
                 link: function ($scope) {
                     var defaults = {
                             'cssClass': 'button button-dark',
-                            'offset': 40,
+                            'offset': -1,
                             'text': 'Bottom'
                         },
                         showAlways,
@@ -124,6 +124,91 @@
 
                         $scope.scrollBottom = function () {
                             delegateHandle.scrollBottom($scope.animate);
+                        };
+                    }
+                }
+            };
+        }
+    ]);
+
+    app.directive('ionScrollerTo', [
+        '$ionicScrollDelegate',
+        function ($ionicScrollDelegate) {
+            return {
+                scope: {
+                    'cssClass': '@?',
+                    'left': '=',
+                    'top': '=',
+                    'text': '@?',
+                    'animate': '@?',
+                    'scrollDelegate': '@?'
+                },
+                restrict: 'E',
+                replace: true,
+                template: '<button ng-class="cssClass" ng-click="scrollTo()">{{text}}</button>',
+                link: function ($scope) {
+                    var defaults = {
+                            'cssClass': 'button button-dark',
+                            'text': 'GoTo'
+                        },
+                        delegateHandle;
+
+                    $scope.cssClass = $scope.cssClass || defaults.cssClass;
+                    $scope.animate = $scope.animate === null || $scope.animate === undefined || $scope.animate === '' || $scope.animate === 'false' ? false : true;
+                    $scope.text = $scope.text === null || $scope.text === undefined ? defaults.text : $scope.text;
+
+                    if ($scope.scrollDelegate && $ionicScrollDelegate.$getByHandle($scope.scrollDelegate)) {
+                        delegateHandle = $ionicScrollDelegate.$getByHandle($scope.scrollDelegate);
+                    } else {
+                        delegateHandle = $ionicScrollDelegate;
+                    }
+
+                    if (delegateHandle) {
+                        $scope.scrollTo = function () {
+                            delegateHandle.scrollTo($scope.left, $scope.top, $scope.animate);
+                        };
+                    }
+                }
+            };
+        }
+    ]);
+
+    app.directive('ionScrollerAnchor', [
+        '$location',
+        '$ionicScrollDelegate',
+        function ($location, $ionicScrollDelegate) {
+            return {
+                scope: {
+                    'cssClass': '@?',
+                    'anchor': '@',
+                    'text': '@?',
+                    'animate': '@?',
+                    'scrollDelegate': '@?'
+                },
+                restrict: 'E',
+                replace: true,
+                template: '<button ng-class="cssClass" ng-click="scrollAnchor()">{{text}}</button>',
+                link: function ($scope) {
+                    var defaults = {
+                            'cssClass': 'button button-dark',
+                            'text': 'GoTo'
+                        },
+                        delegateHandle;
+
+                    $scope.cssClass = $scope.cssClass || defaults.cssClass;
+                    $scope.animate = $scope.animate === null || $scope.animate === undefined || $scope.animate === '' || $scope.animate === 'false' ? false : true;
+                    $scope.text = $scope.text === null || $scope.text === undefined ? defaults.text : $scope.text;
+
+                    if ($scope.scrollDelegate && $ionicScrollDelegate.$getByHandle($scope.scrollDelegate)) {
+                        delegateHandle = $ionicScrollDelegate.$getByHandle($scope.scrollDelegate);
+                    } else {
+                        delegateHandle = $ionicScrollDelegate;
+                    }
+
+                    if (delegateHandle) {
+                        $scope.scrollAnchor = function () {
+                            $location.hash($scope.anchor);
+                            delegateHandle.anchorScroll($scope.animate);
                         };
                     }
                 }

@@ -12,7 +12,13 @@
         <script>
             // declare a module and load quillModule
             var myAppModule = angular.module('scrollerTest', ['ionic', 'ionicScroller']);
-
+            myAppModule.config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
+                $urlRouterProvider.otherwise('/start');
+                $stateProvider
+                    .state('start', {
+                        url: '/start'
+                    });
+            }]);
             myAppModule.controller('MainCtrl', [
                 '$scope',
                 function ($scope) {
@@ -24,7 +30,9 @@
     <body ng-app="scrollerTest">
         <ion-content delegate-handle="main" ng-controller="MainCtrl">
             <ion-scroller-bottom scroll-delegate="main" text="DOWN" animate="true" css-class="button button-assertive ion-arrow-down-a" offset="10"></ion-scroller-bottom>
-            <div class="card" ng-repeat="item in list">
+            <ion-scroller-to scroll-delegate="main" text="GoTo" animate="true" css-class="button button-assertive ion-arrow-down-b" left="50" top="200"></ion-scroller-to>
+            <ion-scroller-anchor scroll-delegate="main" text="Anchor" animate="true" css-class="button button-assertive ion-arrow-down-b" anchor="1"></ion-scroller-anchor>
+            <div class="card" ng-repeat="item in list" id="{{$index}}">
               <div class="item item-text-wrap">
                 {{$index}} - This is a basic Card which contains an item that has wrapping text.
               </div>
