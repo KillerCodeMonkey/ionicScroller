@@ -1,9 +1,10 @@
 {
   "name": "ionic-scroller",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Angular and IonicFramework extension to scroll-top, -bottom, -to, -anchor",
   "author": "Bengt Weiße <bengtler@gmail.com>",
   "homepage": "https://github.com/KillerCodeMonkey/ionicScroller",
+  "main": "src/ionic-scroller.min.js",
   "devDependencies": {
     "grunt": "~0.4.3",
     "grunt-contrib-uglify": "~0.6.0"
