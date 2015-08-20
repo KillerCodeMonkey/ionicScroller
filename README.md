@@ -1,4 +1,5 @@
 # ionicScroller
+[![NPM](https://nodei.co/npm/ionic-scroller.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ionic-scroller/)
 
 ionicScroller is an [Angular.js](http://angularjs.org/) and [Ionic Framework](http://ionicframework.com/) extension for simple scroll-top, -bottom, -to functionality.
 
