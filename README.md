@@ -40,3 +40,7 @@ Configuration
 - anchor: `anchor="domNodeId"` (target node-id, required)
 - connect to delegateHandle: `scroll-delegate="delegateHandle"` (default, the main delegateHandle like ion-content)
 - style through class or ng-class expression: `css-class="button button-assertive"` (wraps up in ng-class, default: 'button button-dark')
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/KillerCodeMonkey/ionicscroller/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
